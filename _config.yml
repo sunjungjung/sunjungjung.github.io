@@ -3,7 +3,7 @@ title: SJ Blogging
 description: A small and simple site I made to test out Jekyll.
 baseurl: "" # the subpath of your site, e.g. /blog
 
-url: "https://sunjungjung.github.io/"
+url: "https://sunjungjung.github.io"
 github: https://github.com/sunjungjung/sunjungjung.github.io
 highlighter: rouge
 markdown: kramdown
