@@ -19,5 +19,4 @@ navigation:
   url: /archives/
 - text: Tags
   url: /tags/
-- text: App Documents
-  url: /appDevelopment/
+
