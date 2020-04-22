@@ -10,7 +10,7 @@ Binary search searches for the element from **sorted array**.
 
 First, compare the target value with the middle element from the sorted array. If the target value is bigger than the middle element, eliminate the elements on the left of the array. *(Since the array is sorted, it would eliminate elements that are smaller than the middle element.)*
 
-Repeat the process with the remaining elements. Each process eliminates half of the remaining array. So, in the worst case, it would take log n steps -- O(log *n*).
+Repeat the process with the remaining elements. Each process eliminates half of the remaining array. So, in the worst case, it would take log n steps -- **O(log *n*)**.
 
 
 ```python

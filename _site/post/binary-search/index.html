@@ -53,7 +53,7 @@
 
 <p>First, compare the target value with the middle element from the sorted array. If the target value is bigger than the middle element, eliminate the elements on the left of the array. <em>(Since the array is sorted, it would eliminate elements that are smaller than the middle element.)</em></p>
 
-<p>Repeat the process with the remaining elements. Each process eliminates half of the remaining array. So, in the worst case, it would take log n steps – O(log <em>n</em>).</p>
+<p>Repeat the process with the remaining elements. Each process eliminates half of the remaining array. So, in the worst case, it would take log n steps – <strong>O(log <em>n</em>)</strong>.</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">binary_search</span> <span class="p">(</span><span class="nb">list</span><span class="p">,</span> <span class="n">item</span><span class="p">):</span>
   <span class="n">low</span> <span class="o">=</span> <span class="mi">0</span>

@@ -70,3 +70,27 @@ Swap index i and index j
 
 Swap index i and index j
 2|4|5|6|10
+
+
+
+```python
+def selection_sort (list):
+  new_list = list
+  for i in range (0, len(new_list)):
+    j = i + 1
+    min = i
+
+    for j in range (j, len(new_list)):
+      if new_list[min] > new_list[j]:
+        min = j
+
+    temp = new_list[i]
+    new_list[i] = new_list[min]
+    new_list[min] = temp
+
+  return new_list
+
+
+my_list = [10,4,6,2,5]
+print(selection_sort (my_list))
+```
