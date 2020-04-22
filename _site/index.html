@@ -48,6 +48,150 @@
 <section id="main">
 	  
       <article>
+      <div class="heading"><a href="/post/selection-sort/">Selection Sort</a></div>
+      <p class="meta"><a class="permalink" href="/post/selection-sort/">&#9679;</a> 17 Apr 2020</p>
+      <div>
+        <p>Selection sort starts off with comparing the first element with the remaining elements. After the first iteration, if the smallest value is found, the element at index 0 and the smallest element will be swapped. This process will be repeated until the second to the last value. Just like first iteration, during second iteration, the rest of the elements, except the first one, will be inspected to find the next smallest value. When the iteration finishes, the entire array will be sorted in ascending order.</p>
+
+<p>The first iteration takes O(n) time since it touches every elements in the list, and it has to be done n times. Therefore selection sort takes <strong>O (n<sup>2</sup>)</strong>.</p>
+
+<h3 id="first-iteration-i--0">first iteration (i = 0)</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th> </th>
+      <th> </th>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>10</td>
+      <td>4</td>
+      <td>6</td>
+      <td>2</td>
+      <td>5</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><em>start iteration assuming minimum is at index i</em></p>
+<ul>
+  <li>
+    <p>min = 0 <em>and</em> j = 1, arr[min] = 10 <em>and</em> arr[j] = 4 <em>are being compared and the minimum is index 1</em></p>
+  </li>
+  <li>
+    <p>min = 1 <em>and</em> j = 2, arr[min] = 4 <em>and</em> arr[j] = 6 <em>so minimum is still at index 1.</em></p>
+  </li>
+  <li>
+    <p>min = 1 <em>and</em> j = 3, arr[min] = 4 <em>and</em> arr[j] = 2. <em>Now minimum is index j, 3.</em></p>
+  </li>
+  <li>
+    <p>min = 3 <em>and</em> j = 4, arr[min] = 2 <em>and</em> arr[j] = 5. <em>Minimum is at index 3.</em></p>
+  </li>
+</ul>
+
+<p>Swap index i and index 3
+2|4|6|10|5</p>
+
+<h3 id="second-iteration-i1">second iteration (i=1)</h3>
+
+<table>
+  <tbody>
+    <tr>
+      <td>2</td>
+      <td>4</td>
+      <td>6</td>
+      <td>10</td>
+      <td>5</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><em>start iteration assuming minimum is at index i</em></p>
+
+<ul>
+  <li>
+    <p>min = 1 <em>and</em> j = 2, arr[min] = 4 <em>and</em> arr[j] = 6 <em>smallest number is at index 1.</em></p>
+  </li>
+  <li>
+    <p>min = 1 <em>and</em> j = 3, arr[min] = 4 <em>and</em> arr[j] = 10 <em>smallest number is at index 1.</em></p>
+  </li>
+  <li>
+    <p>min = 1 <em>and</em> j = 4, arr[min] = 4 <em>and</em> arr[j] = 5 <em>smallest number is at index 1.</em></p>
+  </li>
+</ul>
+
+<p>No swapping for second iteration.
+2|4|6|10|5</p>
+
+<h3 id="third-iteration-i2">third iteration (i=2)</h3>
+
+<table>
+  <tbody>
+    <tr>
+      <td>2</td>
+      <td>4</td>
+      <td>6</td>
+      <td>10</td>
+      <td>5</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><em>start iteration assuming minimum is at index i</em></p>
+
+<ul>
+  <li>
+    <p>min = 2 <em>and</em> j = 3, arr[min] = 6 <em>and</em> arr[j] = 10 <em>smallest number is at index 2.</em></p>
+  </li>
+  <li>
+    <p>min = 2 <em>and</em> j = 4, arr[min] = 6 <em>and</em> arr[j] = 5 <em>smallest number is at index 4.</em></p>
+  </li>
+</ul>
+
+<p>Swap index i and index j
+2|4|5|10|6</p>
+
+<h3 id="fourth-iteration-i3">fourth iteration (i=3)</h3>
+
+<table>
+  <tbody>
+    <tr>
+      <td>2</td>
+      <td>4</td>
+      <td>5</td>
+      <td>10</td>
+      <td>6</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><em>start iteration assuming minimum is at index i</em></p>
+
+<ul>
+  <li>min = 3 <em>and</em> j = 4, arr[min] = 10 <em>and</em> arr[j] = 6 <em>smallest number is at index 4.</em></li>
+</ul>
+
+<p>Swap index i and index j
+2|4|5|6|10</p>
+
+        </div>
+             
+	
+    	<span class="label label-default"><a href="/tags#algorithms-ref" title="View posts tagged with &quot;algorithms&quot;">algorithms</a></span>
+    
+    	<span class="label label-default"><a href="/tags#python-ref" title="View posts tagged with &quot;python&quot;">python</a></span>
+    
+
+
+     </article>
+     <hr>
+  
+      <article>
       <div class="heading"><a href="/post/binary-search/">Binary Search</a></div>
       <p class="meta"><a class="permalink" href="/post/binary-search/">&#9679;</a> 14 Apr 2020</p>
       <div>

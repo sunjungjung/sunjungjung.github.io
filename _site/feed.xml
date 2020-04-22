@@ -7,6 +7,141 @@
 		<atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
+				<title>Selection Sort</title>
+				<description>&lt;p&gt;Selection sort starts off with comparing the first element with the remaining elements. After the first iteration, if the smallest value is found, the element at index 0 and the smallest element will be swapped. This process will be repeated until the second to the last value. Just like first iteration, during second iteration, the rest of the elements, except the first one, will be inspected to find the next smallest value. When the iteration finishes, the entire array will be sorted in ascending order.&lt;/p&gt;
+
+&lt;p&gt;The first iteration takes O(n) time since it touches every elements in the list, and it has to be done n times. Therefore selection sort takes &lt;strong&gt;O (n&lt;sup&gt;2&lt;/sup&gt;)&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;first-iteration-i--0&quot;&gt;first iteration (i = 0)&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt; &lt;/th&gt;
+      &lt;th&gt; &lt;/th&gt;
+      &lt;th&gt; &lt;/th&gt;
+      &lt;th&gt; &lt;/th&gt;
+      &lt;th&gt; &lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;10&lt;/td&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;6&lt;/td&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;5&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;em&gt;start iteration assuming minimum is at index i&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;min = 0 &lt;em&gt;and&lt;/em&gt; j = 1, arr[min] = 10 &lt;em&gt;and&lt;/em&gt; arr[j] = 4 &lt;em&gt;are being compared and the minimum is index 1&lt;/em&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;min = 1 &lt;em&gt;and&lt;/em&gt; j = 2, arr[min] = 4 &lt;em&gt;and&lt;/em&gt; arr[j] = 6 &lt;em&gt;so minimum is still at index 1.&lt;/em&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;min = 1 &lt;em&gt;and&lt;/em&gt; j = 3, arr[min] = 4 &lt;em&gt;and&lt;/em&gt; arr[j] = 2. &lt;em&gt;Now minimum is index j, 3.&lt;/em&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;min = 3 &lt;em&gt;and&lt;/em&gt; j = 4, arr[min] = 2 &lt;em&gt;and&lt;/em&gt; arr[j] = 5. &lt;em&gt;Minimum is at index 3.&lt;/em&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Swap index i and index 3
+2|4|6|10|5&lt;/p&gt;
+
+&lt;h3 id=&quot;second-iteration-i1&quot;&gt;second iteration (i=1)&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;6&lt;/td&gt;
+      &lt;td&gt;10&lt;/td&gt;
+      &lt;td&gt;5&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;em&gt;start iteration assuming minimum is at index i&lt;/em&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;min = 1 &lt;em&gt;and&lt;/em&gt; j = 2, arr[min] = 4 &lt;em&gt;and&lt;/em&gt; arr[j] = 6 &lt;em&gt;smallest number is at index 1.&lt;/em&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;min = 1 &lt;em&gt;and&lt;/em&gt; j = 3, arr[min] = 4 &lt;em&gt;and&lt;/em&gt; arr[j] = 10 &lt;em&gt;smallest number is at index 1.&lt;/em&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;min = 1 &lt;em&gt;and&lt;/em&gt; j = 4, arr[min] = 4 &lt;em&gt;and&lt;/em&gt; arr[j] = 5 &lt;em&gt;smallest number is at index 1.&lt;/em&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;No swapping for second iteration.
+2|4|6|10|5&lt;/p&gt;
+
+&lt;h3 id=&quot;third-iteration-i2&quot;&gt;third iteration (i=2)&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;6&lt;/td&gt;
+      &lt;td&gt;10&lt;/td&gt;
+      &lt;td&gt;5&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;em&gt;start iteration assuming minimum is at index i&lt;/em&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;min = 2 &lt;em&gt;and&lt;/em&gt; j = 3, arr[min] = 6 &lt;em&gt;and&lt;/em&gt; arr[j] = 10 &lt;em&gt;smallest number is at index 2.&lt;/em&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;min = 2 &lt;em&gt;and&lt;/em&gt; j = 4, arr[min] = 6 &lt;em&gt;and&lt;/em&gt; arr[j] = 5 &lt;em&gt;smallest number is at index 4.&lt;/em&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Swap index i and index j
+2|4|5|10|6&lt;/p&gt;
+
+&lt;h3 id=&quot;fourth-iteration-i3&quot;&gt;fourth iteration (i=3)&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;5&lt;/td&gt;
+      &lt;td&gt;10&lt;/td&gt;
+      &lt;td&gt;6&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;em&gt;start iteration assuming minimum is at index i&lt;/em&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;min = 3 &lt;em&gt;and&lt;/em&gt; j = 4, arr[min] = 10 &lt;em&gt;and&lt;/em&gt; arr[j] = 6 &lt;em&gt;smallest number is at index 4.&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Swap index i and index j
+2|4|5|6|10&lt;/p&gt;
+</description>
+				<pubDate>Fri, 17 Apr 2020 03:57:00 +0900</pubDate>
+				<link>http://localhost:4000/post/selection-sort/</link>
+				<guid isPermaLink="true">http://localhost:4000/post/selection-sort/</guid>
+			</item>
+		
+			<item>
 				<title>Binary Search</title>
 				<description>&lt;p&gt;Binary search searches for the element from &lt;strong&gt;sorted array&lt;/strong&gt;.&lt;/p&gt;
 
