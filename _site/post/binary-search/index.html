@@ -1,0 +1,92 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="icon" type="image/icon" href="favicon.ico">
+
+<title>Binary Search</title>
+
+<link rel="stylesheet" href="http://localhost:4000/css/syntax.css">
+<link rel="stylesheet" href="http://localhost:4000/css/main.css">
+</head>
+<body>
+
+<header>
+<div id="nav_container">
+<nav>
+
+  <ul>
+  <h1><a href="http://localhost:4000">SJ Blogging</a></h1>
+    
+      
+      
+
+      <li class="">
+        <a class="" href="http://localhost:4000/archives/">Archives</a>
+      </li>
+    
+      
+      
+
+      <li class="">
+        <a class="" href="http://localhost:4000/tags/">Tags</a>
+      </li>
+    
+      
+      
+
+      <li class="">
+        <a class="" href="http://localhost:4000/projects/">Projects</a>
+      </li>
+    
+  </ul>
+
+</nav>
+</div>
+</header>
+
+<section id="main">
+	<article>
+<div class="heading">Binary Search</div>
+<p class="meta"><a class="permalink" href="">&#9679;</a> 14 Apr 2020</p>
+<p>Binary search searches for the element from <strong>sorted array</strong>.</p>
+
+<p>First, compare the target value with the middle element from the sorted array. If the target value is bigger than the middle element, eliminate the elements on the left of the array. <em>(Since the array is sorted, it would eliminate elements that are smaller than the middle element.)</em></p>
+
+<p>Repeat the process with the remaining elements. Each process eliminates half of the remaining array. So, in the worst case, it would take log n steps – O(log <em>n</em>).</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">binary_search</span> <span class="p">(</span><span class="nb">list</span><span class="p">,</span> <span class="n">item</span><span class="p">):</span>
+  <span class="n">low</span> <span class="o">=</span> <span class="mi">0</span>
+  <span class="n">high</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span>
+
+  <span class="k">while</span> <span class="n">low</span> <span class="o">&lt;=</span> <span class="n">high</span><span class="p">:</span>
+    <span class="n">mid</span> <span class="o">=</span> <span class="p">(</span><span class="n">low</span> <span class="o">+</span> <span class="n">high</span><span class="p">)</span><span class="o">//</span><span class="mi">2</span>
+    <span class="n">guess</span> <span class="o">=</span> <span class="nb">list</span><span class="p">[</span><span class="n">mid</span><span class="p">]</span>
+
+    <span class="k">if</span> <span class="n">guess</span> <span class="o">==</span> <span class="n">item</span><span class="p">:</span>
+      <span class="k">return</span> <span class="n">mid</span>
+    <span class="k">if</span> <span class="n">guess</span> <span class="o">&gt;</span> <span class="n">item</span><span class="p">:</span>
+      <span class="n">high</span> <span class="o">=</span> <span class="n">mid</span> <span class="o">-</span> <span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span>
+      <span class="n">low</span> <span class="o">=</span> <span class="n">mid</span> <span class="o">+</span> <span class="mi">1</span>
+  <span class="k">return</span> <span class="bp">None</span>
+
+
+<span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">39</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">104</span><span class="p">,</span> <span class="mi">204</span><span class="p">]</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">binary_search</span><span class="p">(</span><span class="n">my_list</span><span class="p">,</span> <span class="mi">20</span><span class="p">))</span>
+</code></pre></div></div>
+
+
+
+	
+    	<span class="label label-default"><a href="/tags#algorithms-ref" title="View posts tagged with &quot;algorithms&quot;">algorithms</a></span>
+    
+    	<span class="label label-default"><a href="/tags#python-ref" title="View posts tagged with &quot;python&quot;">python</a></span>
+    
+
+</article>
+</section>
+
+</body>
+</html>
